@@ -20,7 +20,7 @@
   top: 0;
   left: 0;
   clip-path: inset(0 100% 0 0);
-  transition: clip-path 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: clip-path 5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 #banner-img-new.reveal {
   clip-path: inset(0 0% 0 0);
@@ -113,14 +113,16 @@
 
 .logo-icon {
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 1s ease;
 }
 .logo-icon.show { opacity: 1; }
-
+/* .samsung-txt{
+  position: absolute;
+} */
 #eng-txt {
   opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateX(10px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 #eng-txt.show {
   opacity: 1;
@@ -302,6 +304,9 @@
   .title {
     margin-bottom: 32px !important;
   }
+    .card-img{
+    margin: 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -312,16 +317,24 @@
     font-size: 30px;
     margin-bottom: 24px !important;
   }
+    .card-img{
+    margin: 0;
+  }
+      .spec-row{
+    padding: 7px 0;
+  }
   .card-grid {
     grid-template-columns: 600px;
     justify-content: center;
   }
   .card-title { font-size: 26px; }
-  .card-subtitle { font-size: 13px; }
   .card-badge { font-size: 13px; }
-  .spec-label { font-size: 22px; }
-  .spec-value { font-size: 22px; }
-  .price { font-size: 32px; }
+  .card-subtitle { font-size: 13px; }
+  .spec-label { font-size: 20px; }
+  .spec-value { font-size: 20px; }
+  .price { font-size: 30px; 
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 657px) {
@@ -333,28 +346,78 @@
     justify-content: center;
   }
   .title {
-    margin-bottom: 20px !important;
+    font-size: 26px;
+    margin-bottom: 30px !important;
   }
+  .card-img{
+    margin: 0;
+  }
+  .card-grid {
+    grid-template-columns: 500px;
+    justify-content: center;
+  }
+    .spec-row{
+    padding: 6px 0;
+  }
+  .card-badge { font-size: 12px; }
+  .card-title { font-size: 18px; }
+  .card-subtitle { font-size: 12px; }
+  .spec-label { font-size: 14px; }
+  .spec-value { font-size: 14px; }
+  .price { font-size: 22px; }
 }
+
 
 @media (max-width: 480px) {
   #view-cards {
     padding: 16px 0 32px !important;
   }
   .title {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 16px !important;
   }
+  .card-img{
+    margin: 0;
+  }
   .card-grid {
-    grid-template-columns: 390px;
+    grid-template-columns: 400px;
     justify-content: center;
   }
-  .card-title { font-size: 22px; }
-  .card-subtitle { font-size: 12px; }
+    .spec-row{
+    padding: 4px 0;
+  }
   .card-badge { font-size: 12px; }
-  .spec-label { font-size: 16px; }
-  .spec-value { font-size: 16px; }
-  .price { font-size: 24px; }
+  .card-title { font-size: 18px; }
+  .card-subtitle { font-size: 12px; }
+  .spec-label { font-size: 14px; }
+  .spec-value { font-size: 14px; }
+  .price { font-size: 22px; }
+}
+@media(max-width:390px){
+  #view-cards{
+    padding: 12px 0 28px !important;
+  }
+  .title{
+    font-size: 20px;
+    margin-bottom: 14px !important;
+  }
+  .card-img{
+    margin: 0;
+  }
+  .card-grid{
+    grid-template-columns: 340px;
+    justify-content: center;
+  }
+  .spec-row{
+    padding: 3px 0;
+  }
+  .card-badge { font-size: 8px; }
+  .card-title { font-size: 16px; }
+  .card-subtitle { font-size: 10px; }
+  .spec-label { font-size: 10px; }
+  .spec-value { font-size: 10px; }
+  .price { font-size: 18px; }
+
 }
 
 /* ==============================

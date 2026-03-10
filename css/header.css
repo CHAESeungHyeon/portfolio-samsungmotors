@@ -79,15 +79,15 @@ header .container{
 }
 @media (max-width: 1080px) {
   .navbar{
-    gap: 200px;
+    gap: 150px;
   }
 }
-@media (max-width: 930px) {
+@media (max-width: 900px) {
   .navbar{
-    gap: 100px;
+    gap: 80px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 790px) {
   header {
     height: 70px;
   }
