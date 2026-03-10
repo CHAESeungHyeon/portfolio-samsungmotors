@@ -346,7 +346,7 @@
     margin-bottom: 16px !important;
   }
   .card-grid {
-    grid-template-columns: 400px;
+    grid-template-columns: 390px;
     justify-content: center;
   }
   .card-title { font-size: 22px; }
