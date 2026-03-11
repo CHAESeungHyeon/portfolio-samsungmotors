@@ -1,0 +1,139 @@
+header{
+  width: 100%;
+  max-width: 1920px;
+  height: 100px;
+  margin: auto;
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  display: flex;
+  background: #fff;
+}
+header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  width: 200px;
+}
+.navbar{
+  display: flex;
+  gap: 465px;
+}
+.navbar .navbtn1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  white-space: nowrap;
+}
+.navbar .navbtn2{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.navbar .navbtn2 li,
+.search, .user
+{
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+/* ── 햄버거 버튼 기본 숨김 ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 30;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #000;
+  transition: all 0.3s ease;
+}
+
+/* 햄버거 → X 아이콘 변환 */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── 태블릿 ── */
+@media (max-width: 1200px) {
+  .navbar{
+    gap: 380px;
+  }
+}
+@media (max-width: 1080px) {
+  .navbar{
+    gap: 150px;
+  }
+}
+@media (max-width: 900px) {
+  .navbar{
+    gap: 80px;
+  }
+}
+@media (max-width: 790px) {
+  header {
+    height: 70px;
+  }
+  .hamburger {
+    display: flex; /* 햄버거 버튼 표시 */
+  }
+  .navbar {
+    display: none; /* 기본 nav 숨김 */
+    flex-direction: column;
+    gap: 0;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 20;
+  }
+  .navbar.open {
+    display: flex; /* JS로 open 클래스 토글 시 표시 */
+  }
+  .navbar .navbtn1 {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+  .navbar .navbtn1 li a {
+    display: block;
+    padding: 14px 24px;
+    font-size: 16px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .navbar .navbtn2 {
+    padding: 16px 24px;
+    gap: 20px;
+  }
+}
+
+/* ── 모바일 ── */
+@media (max-width: 480px) {
+  .logo {
+    width: 140px;
+  }
+  .navbar .navbtn1 li a {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+}
