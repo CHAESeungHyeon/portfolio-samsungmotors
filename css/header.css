@@ -1,6 +1,5 @@
 header{
   width: 100%;
-  max-width: 1920px;
   height: 100px;
   margin: auto;
   z-index: 20;
@@ -128,7 +127,7 @@ header .container{
 }
 
 /* ── 모바일 ── */
-@media (max-width: 480px) {
+@media (max-width: 481px) {
   .logo {
     width: 140px;
   }

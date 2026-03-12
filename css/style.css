@@ -607,7 +607,7 @@
   }
   
   /* ── 모바일 ── */
-  @media (max-width: 480px) {
+  @media (max-width: 481px) {
     .top-txt {
       gap: 0;
       top: 1%;
@@ -694,7 +694,7 @@
   }
   }
 
-@media(max-width:390px){
+@media(max-width:391px){
   #view-cards{
     padding: 12px 0 28px !important;
   }
