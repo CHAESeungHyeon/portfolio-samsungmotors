@@ -41,7 +41,7 @@
 ## 🚀 실행 방법
 
 ```bash
-git clone https://github.com/CHAESeungHyeon/samsung-motors-redesign.git
+git clone https://github.com/CHAESeungHyeon/samsung-motors-relaunch.git
 ```
 
 ---
