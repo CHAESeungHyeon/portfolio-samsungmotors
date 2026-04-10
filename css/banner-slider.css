@@ -1,0 +1,70 @@
+/* =====================================================
+   Banner Slider — 공유 스타일 (car-model 1·2·3 공통)
+===================================================== */
+
+/* 슬라이드 배경 래퍼 */
+.banner-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* 개별 슬라이드 */
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* 컨트롤 버튼 래퍼 */
+.banner-controls {
+  position: absolute;
+  bottom: 36px;
+  right: 48px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.banner-controls button {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.28);
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s;
+  backdrop-filter: blur(4px);
+}
+
+.banner-controls button:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: #fff;
+}
+
+/* 모바일에서 컨트롤 위치 조정 */
+@media (max-width: 768px) {
+  .banner-controls {
+    bottom: 16px;
+    right: 20px;
+  }
+  .banner-controls button {
+    width: 32px;
+    height: 32px;
+    font-size: 11px;
+  }
+}

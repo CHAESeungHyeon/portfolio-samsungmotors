@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"c:\\\\Users\\\\chaeh\\\\Desktop\\\\포트폴리오 최종\\\\samsung-motors-relaunch\"/*.html)",
+      "Bash(ls \"/c/Users/chaeh/Desktop/포트폴리오 최종/samsung-motors-relaunch\"/*.html)",
+      "Bash(ls \"c:/Users/chaeh/Desktop/포트폴리오 최종/samsung-motors-relaunch/imgs/model-img/topbanner\"*)"
+    ]
+  }
+}

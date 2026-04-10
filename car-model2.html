@@ -17,7 +17,9 @@
   <link rel="stylesheet" href="css/footer.css" />
   <!-- style -->
   <link rel="stylesheet" href="css/car-model2.css" />
+  <link rel="stylesheet" href="css/banner-slider.css" />
   <script src="js/car-model2.js" defer></script>
+  <script src="js/banner-slider.js" defer></script>
 </head>
 <body>
   <!-- header-nav -->
@@ -51,6 +53,14 @@
   <main>
     <!-- topBanner========================================================== -->
     <section id="topBanner">
+      <!-- 슬라이드 배경 -->
+      <div class="banner-slides">
+        <div class="slide active" style="background-image: url('imgs/model-img/topbanner.png')"></div>
+        <div class="slide"        style="background-image: url('imgs/model-img/topbanner (1).png')"></div>
+        <div class="slide"        style="background-image: url('imgs/model-img/topbanner (2).png')"></div>
+        <div class="slide"        style="background-image: url('imgs/model-img/topbanner (3).png')"></div>
+      </div>
+
       <div class="container">
         <div class="title">
           <img src="imgs/icon-img/Samsung Logo.png">
@@ -63,6 +73,13 @@
             <a href="#" class="drive">시승 신청</a>
           </div>
         </div>
+      </div>
+
+      <!-- 슬라이드 컨트롤 -->
+      <div class="banner-controls">
+        <button class="btn-prev" aria-label="이전"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="btn-pause" aria-label="일시정지"><i class="fa-solid fa-pause"></i></button>
+        <button class="btn-next" aria-label="다음"><i class="fa-solid fa-chevron-right"></i></button>
       </div>
     </section>
 

@@ -1,11 +1,13 @@
 #topBanner {
   width: 100%;
-  background: url(../imgs/model-img/topbanner.png) no-repeat center/cover;
   height: 90vh;
   position: relative;
+  overflow: hidden;
 }
 
 #topBanner .container {
+  position: relative;
+  z-index: 1;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -305,7 +307,7 @@
   .spec-item { padding: 18px 16px 16px 24px; }
   .spec-label { font-size: 14px; }
   .spec-value { font-size: 18px; }
-    #spec .spec-img{width: 1020px;}
+    #spec .spec-img{width: 1010px;}
 
   /* ── 서비스 카드 ── */
   .service-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
@@ -336,7 +338,7 @@
   .spec-item { padding: 16px 12px 14px 16px; }
   .spec-label { font-size: 13px; }
   .spec-value { font-size: 16px; }
-    #spec .spec-img{width: 768px;}
+    #spec .spec-img{width: 758px;}
 
   /* ── 서비스 카드 ── */
   .service-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
@@ -359,7 +361,7 @@
 
   /* ── spec ── */
   #spec .title { margin: 45px 0 90px; font-size: 25px; }
-    #spec .spec-img{width: 657px;}
+    #spec .spec-img{width: 647px;}
 }
 
 @media (max-width: 481px) {
@@ -378,14 +380,14 @@
 
   /* ── spec ── */
   #spec .title { margin: 35px 0 70px; font-size: 23px; }
-    #spec .spec-img{width: 480px;}
+    #spec .spec-img{width: 470px;}
   .spec-txt .name { font-size: 26px; }
   .spec-subtitle { font-size: 18px; }
   .spec-value { font-size: 16px; }
   .spec-label { font-size: 13px; }
 
   /* ── 서비스 카드 ── */
-  .service-grid { grid-template-columns: 1fr; gap: 12px; }
+  .service-grid { grid-template-columns: 1fr; gap: 12px; margin: 0 5px;}
   .service-card { padding: 20px 20px 14px 20px; min-height: 120px; }
   .service-title { font-size: 14px; }
   .service-link { font-size: 14px; margin-top: 28px; }
@@ -407,5 +409,5 @@
 
   /* ── spec ── */
   #spec .title { margin: 35px 0 50px; font-size: 20px; }
-  #spec .spec-img{width: 390px;}
+  #spec .spec-img{width: 380px;}
 }
