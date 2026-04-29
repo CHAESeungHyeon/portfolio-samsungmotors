@@ -101,3 +101,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
   forwardTransition();
 }); // DOMContentLoaded 닫는 괄호
+
+/* ── 카드 슬라이더 dot 지시자 ── */
+(function () {
+  const slider   = document.querySelector('.card-slider');
+  const dotsWrap = document.getElementById('cardDots');
+  if (!slider || !dotsWrap) return;
+
+  const cards = slider.querySelectorAll('.card-grid .card');
+  const TOTAL = cards.length;
+  if (TOTAL === 0) return;
+
+  /* 도트 생성 */
+  function buildDots() {
+    dotsWrap.innerHTML = '';
+    for (let i = 0; i < TOTAL; i++) {
+      const btn = document.createElement('button');
+      btn.className = 'card-dot' + (i === 0 ? ' active' : '');
+      btn.setAttribute('aria-label', '카드 ' + (i + 1));
+      btn.addEventListener('click', function () {
+        const cardWidth = cards[0].offsetWidth;
+        slider.scrollTo({ left: i * (cardWidth + 15), behavior: 'smooth' });
+      });
+      dotsWrap.appendChild(btn);
+    }
+  }
+
+  /* 스크롤 위치에 따라 활성 dot 업데이트 */
+  function updateDots() {
+    const cardWidth = cards[0].offsetWidth;
+    const idx = Math.round(slider.scrollLeft / (cardWidth + 15));
+    dotsWrap.querySelectorAll('.card-dot').forEach(function (d, i) {
+      d.classList.toggle('active', i === idx);
+    });
+  }
+
+  slider.addEventListener('scroll', updateDots, { passive: true });
+
+  buildDots();
+})();

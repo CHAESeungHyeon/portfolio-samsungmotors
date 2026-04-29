@@ -167,6 +167,13 @@
   gap: 43px;
 }
 
+/* ===========================
+  카드 슬라이더 dot 지시자
+=========================== */
+.card-dots {
+  display: none; /* 데스크탑에서는 숨김 */
+}
+
 
 /* ===========================
 카드 공통
@@ -431,6 +438,54 @@
     margin: 0;
   }
 
+  /* 카드 슬라이더 (반응형 공통) */
+  .card-slider {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-padding-left: 15px;
+  }
+  .card-slider::-webkit-scrollbar {
+    display: none;
+  }
+  .card-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 0 15px;
+    width: max-content;
+  }
+  .card {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: calc(100vw - 30px);
+  }
+
+  /* 카드 dot 지시자 */
+  .card-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .card-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    transition: background 0.25s, border-color 0.25s;
+  }
+  .card-dot.active {
+    background: #1a1a1a;
+    border-color: #1a1a1a;
+  }
+
     /* .service-grid */
     
     .service-grid {
@@ -502,10 +557,6 @@
       .spec-row{
     padding: 7px 0;
   }
-  .card-grid {
-    grid-template-columns: 600px;
-    justify-content: center;
-  }
   .card-title { font-size: 26px; }
   .card-badge { font-size: 13px; }
   .card-subtitle { font-size: 13px; }
@@ -552,20 +603,12 @@
   #view-cards {
     padding: 20px 0 40px !important;
   }
-  .card-grid {
-    grid-template-columns: 500px;
-    justify-content: center;
-  }
   .title {
     font-size: 26px;
     margin-bottom: 30px !important;
   }
   .card-img{
     margin: 0;
-  }
-  .card-grid {
-    grid-template-columns: 500px;
-    justify-content: center;
   }
   .spec-row{
     padding: 6px 0;
@@ -581,6 +624,7 @@
 
   .news-card {
     grid-template-columns: 1fr;
+    margin: 0px 15px;
   }
   .news-txt {
     padding: 28px 24px;   /* 80px → 24px로 축소 */
@@ -636,10 +680,6 @@
   .card-img{
     margin: 0;
   }
-  .card-grid {
-    grid-template-columns: 400px;
-    justify-content: center;
-  }
   .spec-row{
     padding: 4px 0;
   }
@@ -654,6 +694,7 @@
     
     .service-grid {
     grid-template-columns: 1fr; /* 2열 → 1열 */
+    margin: 0px 15px;
     gap: 12px;
   }
   .service-card {
@@ -704,10 +745,6 @@
   }
   .card-img{
     margin: 0;
-  }
-  .card-grid{
-    grid-template-columns: 340px;
-    justify-content: center;
   }
   .spec-row{
     padding: 3px 0;

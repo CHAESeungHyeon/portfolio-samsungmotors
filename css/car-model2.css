@@ -160,9 +160,10 @@
 }
 
 /* =====================================================
-   소제목 — 배경 #f5f5f5
+소제목 — 배경 #f5f5f5
 ===================================================== */
 .spec-subtitle {
+  border: 1px solid #f0f0f0;
   font-size: 27px;
   font-weight: 500;
   letter-spacing: 6%;
@@ -171,17 +172,14 @@
 }
 
 /* =====================================================
-   제원 항목 — 배경 #fff
+제원 항목 — 배경 #fff
 ===================================================== */
 .spec-item {
   background: #fff;
-  border-bottom: 1px solid #f0f0f0;
+  border: 1px solid #f0f0f0;
   padding: 23px 12px 20px 24px;
 }
 
-.spec-item:last-child {
-  border-bottom: none;
-}
 
 .spec-label {
   font-size: 16px;
@@ -364,7 +362,7 @@
     #spec .spec-img{width: 647px;}
 }
 
-@media (max-width: 485px) {
+@media (max-width: 481px) {
   main { padding: 70px 0; }
 
   /* ── topBanner ── */
@@ -380,11 +378,12 @@
 
   /* ── spec ── */
   #spec .title { margin: 35px 0 70px; font-size: 23px; }
-    #spec .spec-img{width: 470px;}
+    #spec .spec-img{width: 420px;}
   .spec-txt .name { font-size: 26px; }
   .spec-subtitle { font-size: 18px; }
   .spec-value { font-size: 16px; }
   .spec-label { font-size: 13px; }
+  .spec-dots { margin-top: 18px; }
 
   /* ── 서비스 카드 ── */
   .service-grid { grid-template-columns: 1fr; gap: 12px; margin: 0 5px;}
@@ -410,4 +409,5 @@
   /* ── spec ── */
   #spec .title { margin: 35px 0 50px; font-size: 20px; }
   #spec .spec-img{width: 380px;}
+  .spec-dots { margin-top: 14px; }
 }
