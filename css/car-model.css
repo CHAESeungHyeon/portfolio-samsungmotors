@@ -257,7 +257,7 @@ text-align: center;
   #topBanner .slogan h3 { font-size: 26px; letter-spacing: 3px; }
   #topBanner .btn a { padding: 12px 24px; font-size: 14px; }
 
-  #model-imgs > .container { margin-top: 40px; }
+  #model-imgs > .container { margin-top: 40px; padding: 0 15px; }
   #model-imgs .title p { font-size: 15px; }
   #model-imgs .title h1 { font-size: 24px; margin: 6px 0 36px; }
   #model-imgs .title span { font-size: 18px; }
@@ -270,6 +270,7 @@ text-align: center;
   #model-imgs .box-txt2 h3 { font-size: 20px; text-align: center; }
   #model-imgs .box-txt2 p { font-size: 15px; width: 100%; }
 
+  #function .container { padding: 0 15px; }
   #interier { margin: 140px 0 80px; height: 60vh; background-size: cover; background-position: center; }
   #interier .container h1 { font-size: 32px; padding-top: 32px; }
   #function .function-txt h3 { font-size: 24px; }
