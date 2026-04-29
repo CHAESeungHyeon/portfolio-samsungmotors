@@ -364,7 +364,7 @@
     #spec .spec-img{width: 647px;}
 }
 
-@media (max-width: 481px) {
+@media (max-width: 485px) {
   main { padding: 70px 0; }
 
   /* ── topBanner ── */
